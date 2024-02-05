@@ -1,0 +1,10 @@
+window_sizes 2560 1377 600 1955 1227 104
+
+show_stereotypes
+selected usecasediagram_ref 128824 // UseCaseDiagram
+open
+  activity_ref 128184 // Activity
+  state_ref 128312 // StateMachine
+  usecaseview_ref 128184 // My use cases
+end
+end

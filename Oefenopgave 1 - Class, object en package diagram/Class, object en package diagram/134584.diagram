@@ -1,0 +1,54 @@
+format 224
+
+classinstancecanvas 132536 classinstance_ref 130232 // 1a
+  xyz 445 88 2000
+end
+classinstancecanvas 132664 classinstance_ref 130360 // Scholier Jan
+  xyz 220 146 2000
+end
+classinstancecanvas 132920 classinstance_ref 130488 // Wiskunde
+  xyz 401 182 2000
+end
+classinstancecanvas 133432 classinstance_ref 130616 // Scholier Bert
+  xyz 570 145 2000
+end
+classinstancecanvas 133816 classinstance_ref 130872 // RapportGrade Jan Wiskunde
+  xyz 169 311 2000
+end
+classinstancecanvas 134968 classinstance_ref 131384 // Alfred
+  xyz 415 245 2000
+end
+classinstancecanvas 135864 classinstance_ref 131512 // RapportGrade Bert Wiskunde
+  xyz 487 310 2000
+end
+classinstancecanvas 136376 classinstance_ref 138040 // 
+  xyz 515 207 2006
+end
+objectlinkcanvas 132792 norel
+  from ref 132664 z 2001 to ref 132536
+  no_role_a no_role_b
+objectlinkcanvas 133048 norel
+  from ref 132664 z 2001 to ref 132920
+  no_role_a no_role_b
+objectlinkcanvas 133944 norel
+  from ref 132664 z 2001 to ref 133816
+  no_role_a no_role_b
+objectlinkcanvas 135096 norel
+  from ref 132920 z 2001 to ref 134968
+  no_role_a no_role_b
+objectlinkcanvas 135480 norel
+  from ref 134968 z 2001 to ref 133816
+  no_role_a no_role_b
+objectlinkcanvas 135992 norel
+  from ref 134968 z 2001 to ref 135864
+  no_role_a no_role_b
+objectlinkcanvas 136120 norel
+  from ref 133432 z 2001 to ref 135864
+  no_role_a no_role_b
+objectlinkcanvas 136248 norel
+  from ref 132536 z 2001 to ref 133432
+  no_role_a no_role_b
+objectlinkcanvas 136504 norel
+  from ref 134968 z 2007 to ref 136376
+  no_role_a no_role_b
+end

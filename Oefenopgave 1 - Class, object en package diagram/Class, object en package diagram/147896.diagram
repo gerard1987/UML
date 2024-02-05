@@ -1,0 +1,66 @@
+format 224
+
+activitycanvas 128056 activity_ref 128056 // RapportGradeActivity
+  
+  xyzwh 71 80 2000 667 489
+end
+activityobjectcanvas 128824 activityobject_ref 128184 // activity object rapportGrade
+  
+  xyzwh 114 177 2005 85 45
+end
+activitynodecanvas 129336 activitynode_ref 128568 // decision
+  xyz 364 300 2005
+end
+activityactioncanvas 130872 activityaction_ref 128312 // activity action CheckRapportGrade
+  
+  show_opaque_action_definition default
+  xyzwh 99 287 2005 117 62
+end
+activityactioncanvas 131640 activityaction_ref 128440 // activity action StoreRapportGrade
+  
+  show_opaque_action_definition default
+  xyzwh 524 293 2005 119 62
+end
+activityactioncanvas 132024 activityaction_ref 128568 // activity action RapportInvalidRapportGrade
+  
+  show_opaque_action_definition default
+  xyzwh 375 422 2005 166 51
+end
+activitynodecanvas 132408 activitynode_ref 128824 // flow_final
+  xyz 694 314 2005
+end
+activitycanvas 132664 activity_ref 128184 // ActionFlowRaportGradeActivity
+  
+  xyzwh 964 155 2000 400 400
+end
+flowcanvas 131000 flow_ref 128824 // <flow>
+  
+  from ref 128824 z 2006 to ref 130872
+   write_horizontally default
+end
+flowcanvas 131512 flow_ref 129080 // result
+  
+  from ref 130872 z 2006 label "result" xyz 276 302.5 3000 stereotype "<<decisionInputFlow>>" xyz 234 316.5 3000 to ref 129336
+   write_horizontally default
+end
+flowcanvas 131768 flow_ref 129208 // <flow>
+  
+  from ref 129336 z 2006 label "[result ok]" max_width 162 xyz 425.5 300.5 3000 to ref 131640
+   write_horizontally default
+end
+flowcanvas 132152 flow_ref 129336 // <flow>
+  
+  from ref 129336 z 2006 label "[result invalid]" xyz 380 363 3000 to ref 132024
+   write_horizontally default
+end
+flowcanvas 132280 flow_ref 129464 // <flow>
+  
+  from ref 132024 z 2006 to ref 131640
+   write_horizontally default
+end
+flowcanvas 132536 flow_ref 129592 // <flow>
+  
+  from ref 131640 z 2006 to ref 132408
+   write_horizontally default
+end
+end

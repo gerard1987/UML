@@ -1,0 +1,80 @@
+format 224
+
+classinstancecanvas 128696 classinstance_ref 128056 // 
+  xyz 162 4 2000 life_line_z 2000
+end
+classinstancecanvas 128824 classinstance_ref 129464 // 
+  xyz 290 4 2000 life_line_z 2000
+end
+classinstancecanvas 128952 classinstance_ref 138040 // 
+  xyz 27 4 2000 life_line_z 2000
+end
+classinstancecanvas 129080 classinstance_ref 129976 // 
+  xyz 673 5 2000 life_line_z 2000
+end
+classinstance 129720 class_ref 128952 // rapportGrade
+  name ""   xyz 480 4 2005 life_line_z 2000
+durationcanvas 129848 classinstance_ref 128824 // :Teacher
+  xyzwh 312 80 2010 11 68
+end
+durationcanvas 129976 classinstance_ref 129720 // :rapportGrade
+  xyzwh 514 80 2010 11 25
+end
+durationcanvas 130232 classinstance_ref 128696 // :Student
+  xyzwh 183 281 2010 11 43
+end
+durationcanvas 130360 classinstance_ref 129080 // :StorageSystem
+  xyzwh 712 281 2010 11 25
+end
+durationcanvas 132536 classinstance_ref 129080 // :StorageSystem
+  xyzwh 712 114 2010 11 34
+end
+durationcanvas 132792 classinstance_ref 128824 // :Teacher
+  xyzwh 312 313 2010 11 65
+end
+durationcanvas 133048 classinstance_ref 129080 // :StorageSystem
+  xyzwh 712 331 2010 11 47
+end
+durationcanvas 133304 classinstance_ref 128952 // :Mentor
+  xyzwh 47 477 2010 11 40
+end
+durationcanvas 133432 classinstance_ref 129080 // :StorageSystem
+  xyzwh 712 477 2010 11 25
+end
+msg 130104 synchronous
+  from durationcanvas_ref 129848
+  to durationcanvas_ref 129976
+  yz 80 2015 explicitmsg "create"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 408 66
+msg 130488 synchronous
+  from durationcanvas_ref 130232
+  to durationcanvas_ref 130360
+  yz 281 2015 msg operation_ref 128440 // "getRapportGrade()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 368 267
+msg 132664 synchronous
+  from durationcanvas_ref 129848
+  to durationcanvas_ref 132536
+  yz 137 2015 msg operation_ref 128056 // "addRapportGrade()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 470 123
+msg 132920 synchronous
+  from durationcanvas_ref 130232
+  to durationcanvas_ref 132792
+  yz 313 2015 explicitmsg "complain"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 232 299
+msg 133176 synchronous
+  from durationcanvas_ref 132792
+  to durationcanvas_ref 133048
+  yz 367 2015 msg operation_ref 128184 // "modifyRapportGrade()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 463 353
+msg 133560 synchronous
+  from durationcanvas_ref 133304
+  to durationcanvas_ref 133432
+  yz 477 2015 msg operation_ref 128312 // "getStudentRapport()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 336 463
+end

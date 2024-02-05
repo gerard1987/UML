@@ -1,0 +1,1125 @@
+format 224
+"Class, object en package diagram"
+  revision 6
+  modified_by 56 "gerard.deway"
+
+
+  
+  // class settings
+  default_attribute_visibility private default_relation_visibility private default_operation_visibility public
+  
+  classdiagramsettings draw_all_relations yes hide_attributes no hide_operations no hide_getset_operations no hide_ports no show_members_full_definition no show_members_visibility no show_members_stereotype no show_members_context no show_members_multiplicity no show_members_initialization no show_attribute_modifiers no member_max_width 127 show_parameter_dir yes show_parameter_name yes package_name_in_tab no class_drawing_mode natural drawing_language uml show_context_mode no auto_label_position yes show_relation_modifiers no show_relation_visibility no show_infonote no shadow yes gradient none show_stereotype_properties no end
+  
+  classcompositediagramsettings auto_label_position yes draw_all_relations yes shadow yes gradient none end
+  
+  usecasediagramsettings package_name_in_tab no show_context_mode no auto_label_position yes draw_all_relations yes class_drawing_mode actor shadow yes gradient none show_stereotype_properties no end
+  
+  sequencediagramsettings show_full_operations_definition no show_class_of_operation no write_horizontally yes instances_drawing_mode natural drawing_language uml draw_all_relations yes shadow yes gradient none show_stereotype_properties no show_class_context_mode no show_msg_context_mode no end
+  
+  collaborationdiagramsettings show_full_operations_definition no show_class_of_operation no show_hierarchical_rank no write_horizontally yes instances_drawing_mode natural drawing_language uml package_name_in_tab no show_class_pack_context_mode no show_msg_context_mode no draw_all_relations yes shadow yes gradient none show_stereotype_properties no end
+  
+  objectdiagramsettings write_horizontally yes package_name_in_tab no show_class_pack_context_mode no auto_label_position yes draw_all_relations yes shadow yes gradient none show_stereotype_properties no end
+  
+  objectcompositediagramsettings auto_label_position yes draw_all_relations yes shadow yes gradient none end
+  
+  componentdiagramsettings package_name_in_tab no show_context_mode no auto_label_position yes draw_all_relations yes shadow yes gradient none
+   draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no end
+  
+  deploymentdiagramsettings package_name_in_tab no show_context_mode no write_horizontally yes auto_label_position yes draw_all_relations yes shadow yes gradient none
+   draw_component_as_icon no show_component_req_prov no show_component_rea no show_stereotype_properties no end
+  
+  statediagramsettings package_name_in_tab no show_context_mode no auto_label_position yes write_label_horizontally yes show_trans_definition no draw_all_relations yes shadow yes gradient none
+   show_activities yes region_horizontally yes drawing_language uml show_stereotype_properties no end
+  
+  activitydiagramsettings package_name_in_tab no show_context_mode no show_opaque_action_definition no auto_label_position yes write_label_horizontally no draw_all_relations yes shadow yes gradient none
+   show_infonote yes drawing_language uml show_stereotype_properties no end
+  
+  class_color yellow duration_color transparent continuation_color gray note_color blue fragment_color transparent subject_color transparent usecase_color yellow package_color transparent component_color green artifact_color green deploymentnode_color gray state_color yellow stateaction_color transparent activity_color transparent activityregion_color transparent activitypartition_color transparent activityaction_color transparent parameterpin_color white generalization_color black 
+  dpi 96
+  font_size 8
+  diagram_format A4
+
+  image_root_dir ""
+
+
+  mark_for_import
+  
+  classview 128056 "RapportStorageSystem"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 128056 "RapportStorageSystem"
+      classdiagramsettings draw_all_relations no member_max_width 0 end
+      size A4
+    end
+
+    class 128056 "Student"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      associated_diagram classdiagram_ref 128056 // RapportStorageSystem
+      classrelation 128824 // <association>
+	relation_ref 128440 // <association>
+      end
+
+      classrelation 129464 // <aggregation>
+	relation 128824 o---
+	  a role_name "" multiplicity "1" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129464 // <aggregation>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129592 // <aggregation>
+      end
+
+      classrelation 131640 // <composition>
+	relation_ref 130104 // <composition>
+      end
+
+      classrelation 131768 // <composition>
+	relation 130232 *---
+	  a role_name "" multiplicity "1..1" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 131768 // <composition>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 131896 // <composition>
+      end
+
+      classrelation 133048 // <generalisation>
+	relation 131000 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 133048 // <generalisation>
+	  b parent class_ref 128440 // Person
+      end
+
+      classrelation 133944 // <association>
+	relation_ref 131512 // <association>
+      end
+    end
+
+    class 128184 "Teacher"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128312 // <association>
+	relation_ref 128184 // <association>
+      end
+
+      classrelation 129080 // <aggregation>
+	relation_ref 128568 // <aggregation>
+      end
+
+      classrelation 129208 // <aggregation>
+	relation 128696 o---
+	  a role_name "" multiplicity "1..1" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129208 // <aggregation>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129336 // <aggregation>
+      end
+
+      classrelation 130360 // <association>
+	relation_ref 129208 // <association>
+      end
+
+      classrelation 132024 // <composition>
+	relation 130360 *---
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 132024 // <composition>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 132152 // <composition>
+      end
+
+      classrelation 132536 // <generalisation>
+	relation 130616 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 132536 // <generalisation>
+	  b multiplicity "1" parent class_ref 128568 // Mentor
+      end
+
+      classrelation 132664 // <association>
+	relation 130744 ----
+	  a role_name "" multiplicity "1..*" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 132664 // <association>
+	  b role_name "" multiplicity "1..*" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 132792 // <association>
+      end
+
+      classrelation 133176 // <generalisation>
+	relation 131128 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 133176 // <generalisation>
+	  b parent class_ref 128440 // Person
+      end
+
+      classrelation 133688 // <association>
+	relation_ref 131384 // <association>
+      end
+    end
+
+    class 128312 "Subject"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 129848 // <composition>
+	relation_ref 128952 // <composition>
+      end
+
+      classrelation 129976 // <composition>
+	relation 129080 *---
+	  a role_name "" multiplicity "1..*" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129976 // <composition>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 130104 // <composition>
+      end
+
+      classrelation 132792 // <association>
+	relation_ref 130744 // <association>
+      end
+
+      classrelation 133432 // <association>
+	relation_ref 131256 // <association>
+      end
+    end
+
+    class 128440 "Person"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128440 "Name"
+	public explicit_type ""
+	multiplicity "1..1"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 128568 "Mentor"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128056 // <dependency>
+	relation 128056 -_->
+	  a public
+	    php "${type}"
+	    classrelation_ref 128056 // <dependency>
+	  b parent class_ref 128184 // Teacher
+      end
+
+      classrelation 130232 // <association>
+	relation 129208 ----
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 130232 // <association>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 130360 // <association>
+      end
+
+      classrelation 130488 // <aggregation>
+	relation 129336 o---
+	  a role_name "" multiplicity "1..1" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 130488 // <aggregation>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 130616 // <aggregation>
+      end
+
+      classrelation 134328 // <association>
+	relation_ref 131768 // <association>
+      end
+    end
+
+    class 128696 "StorageSystem"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 132408 // <association>
+	relation_ref 130488 // <association>
+      end
+
+      operation 128056 "addRapportGrade"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 128184 "modifyRapportGrade"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 128312 "getStudentRapport"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      operation 128440 "getRapportGrade"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	php_def "  ${comment}${final}${visibility}${abstract}${static}function ${name}${(}${)}${type}
+{
+  ${body}}
+"
+	
+	
+      end
+
+      classrelation 134712 // <aggregation>
+	relation_ref 132024 // <aggregation>
+      end
+
+      classrelation 134840 // <aggregation>
+	relation 132152 o---
+	  a role_name "" multiplicity "*" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 134840 // <aggregation>
+	  b role_name "" multiplicity "1" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 134968 // <aggregation>
+      end
+    end
+
+    class 128824 "Class"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128184 // <association>
+	relation 128184 ----
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 128184 // <association>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 128312 // <association>
+      end
+
+      classrelation 128440 // <association>
+	relation 128312 ----
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 128440 // <association>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 128568 // <association>
+      end
+
+      classrelation 128568 // <association>
+	relation_ref 128312 // <association>
+      end
+
+      classrelation 128696 // <association>
+	relation 128440 ----
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 128696 // <association>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 128824 // <association>
+      end
+
+      classrelation 128952 // <aggregation>
+	relation 128568 o---
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 128952 // <aggregation>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129080 // <aggregation>
+      end
+
+      classrelation 129336 // <aggregation>
+	relation_ref 128696 // <aggregation>
+      end
+
+      classrelation 129592 // <aggregation>
+	relation_ref 128824 // <aggregation>
+      end
+
+      classrelation 129720 // <composition>
+	relation 128952 *---
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129720 // <composition>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 129848 // <composition>
+      end
+
+      classrelation 130104 // <composition>
+	relation_ref 129080 // <composition>
+      end
+
+      classrelation 130616 // <aggregation>
+	relation_ref 129336 // <aggregation>
+      end
+
+      classrelation 131256 // <composition>
+	relation 129976 *---
+	  a role_name "" multiplicity "1..1" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 131256 // <composition>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 131384 // <composition>
+      end
+
+      classrelation 134072 // Klasgenoot (<directional aggregation>)
+	relation 131640 o-->
+	  a role_name "Klasgenoot" multiplicity "1..*" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 134072 // Klasgenoot (<directional aggregation>)
+	  b multiplicity "1" parent class_ref 128056 // Student
+      end
+
+      classrelation 134200 // <association>
+	relation 131768 ----
+	  a role_name "" multiplicity "1" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 134200 // <association>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 134328 // <association>
+      end
+
+      classrelation 134456 // <directional aggregation>
+	relation 131896 o-->
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 134456 // <directional aggregation>
+	  b multiplicity "1..*" parent class_ref 128312 // Subject
+      end
+    end
+
+    class 128952 "rapportGrade"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128568 "grade"
+	private explicit_type "float"
+	cpp_decl ""
+	java_decl ""
+	php_decl "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 131384 // <composition>
+	relation_ref 129976 // <composition>
+      end
+
+      classrelation 131512 // <composition>
+	relation 130104 *---
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 131512 // <composition>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 131640 // <composition>
+      end
+
+      classrelation 131896 // <composition>
+	relation_ref 130232 // <composition>
+      end
+
+      classrelation 132152 // <composition>
+	relation_ref 130360 // <composition>
+      end
+
+      classrelation 132280 // <association>
+	relation 130488 ----
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 132280 // <association>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 132408 // <association>
+      end
+
+      classrelation 133304 // <association>
+	relation 131256 ----
+	  a role_name "" multiplicity "1" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 133304 // <association>
+	  b role_name "" multiplicity "*" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 133432 // <association>
+      end
+
+      classrelation 133560 // <association>
+	relation 131384 ----
+	  a role_name "" multiplicity "1" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 133560 // <association>
+	  b role_name "" multiplicity "*" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 133688 // <association>
+      end
+
+      classrelation 133816 // <association>
+	relation 131512 ----
+	  a role_name "" multiplicity "1" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 133816 // <association>
+	  b role_name "" multiplicity "*" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 133944 // <association>
+      end
+
+      classrelation 134584 // <aggregation>
+	relation 132024 o---
+	  a role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 134584 // <aggregation>
+	  b role_name "" private
+	    php "  ${comment}${visibility}${const}${static}${var}${name}${value};
+"
+	    classrelation_ref 134712 // <aggregation>
+      end
+
+      classrelation 134968 // <aggregation>
+	relation_ref 132152 // <aggregation>
+      end
+    end
+
+    objectdiagram 134584 "RapportStorageImplementation"
+      objectdiagramsettings end
+      size A4
+    end
+
+    classinstance 128056 ""
+      type class_ref 128056 // Student
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 128184 ""
+      type class_ref 128824 // Class
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 128312 ""
+      type class_ref 128312 // Subject
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 128440 ""
+      type class_ref 128184 // Teacher
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 128568 ""
+      type class_ref 128952 // rapportGrade
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 128696 ""
+      type class_ref 128696 // StorageSystem
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 128824 ""
+      type class_ref 128440 // Person
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 128952 "rapport"
+      type class_ref 128952 // rapportGrade
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 129080 ""
+      type class_ref 128056 // Student
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 129208 "Class"
+      type class_ref 128824 // Class
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 129336 "rapportGrade"
+      type class_ref 128952 // rapportGrade
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 129464 ""
+      type class_ref 128184 // Teacher
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 129592 "Person"
+      type class_ref 128440 // Person
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 129848 "Subject"
+      type class_ref 128312 // Subject
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 129976 ""
+      type class_ref 128696 // StorageSystem
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 135480 "1a"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    classinstance 130104 ""
+      type class_ref 135480 // 1a
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 130232 "1a"
+      type class_ref 128824 // Class
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 130360 "Scholier Jan"
+      type class_ref 128056 // Student
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 130488 "Wiskunde"
+      type class_ref 128312 // Subject
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 130616 "Scholier Bert"
+      type class_ref 128056 // Student
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 130744 "RapportGrade Jan"
+      type class_ref 128952 // rapportGrade
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 130872 "RapportGrade Jan Wiskunde"
+      type class_ref 128952 // rapportGrade
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 131000 "RapportGrade Bert"
+      type class_ref 128952 // rapportGrade
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 131128 "RapportGrade Bert Engels"
+      type class_ref 128952 // rapportGrade
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 131256 "Engels"
+      type class_ref 128312 // Subject
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 131384 "Alfred"
+      type class_ref 128184 // Teacher
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 131512 "RapportGrade Bert Wiskunde"
+      type class_ref 128952 // rapportGrade
+      attributes
+        end
+      relations
+        end
+    end
+
+    classdiagram 141240 "Package"
+      classdiagramsettings member_max_width 0 end
+      size A4
+    end
+
+    activity 128056 "RapportGradeActivity"
+      comment "Verwerking met control flow
+"
+      activitydiagram 147896 "RapportGradeCheck"
+	activitydiagramsettings draw_all_relations no
+	 end
+	size A4
+      end
+
+      activityobject 128184 "rapportGrade"
+	 type class_ref 128952 // rapportGrade
+	unordered 
+	associated_diagram activitydiagram_ref 147896 // RapportGradeCheck
+	flow 128184 "<flow>"
+	  on activitynode_ref 128568 // decision
+	end
+
+	flow 128824 "<flow>"
+	  on activityaction_ref 128312 // activity action CheckRapportGrade
+	end
+      end
+
+      activitynode 128312 initial_node ""
+	flow 128056 "<flow>"
+	  on activityobject_ref 128184 // activity object rapportGrade
+	end
+      end
+
+      activitynode 128440 activity_final ""
+      end
+
+      activitynode 128568 decision ""
+	flow 128312 "<flow>"
+	  on activityaction_ref 128056 // activity action Student passed
+	    uml_guard "rapportGrade.grade > 5.5"
+	end
+
+	flow 128440 "<flow>"
+	  on activityaction_ref 128184 // activity action Student Failed
+	    uml_guard "rapportGrade.grade < 5.5"
+	end
+
+	flow 129208 "<flow>"
+	  on activityaction_ref 128440 // activity action StoreRapportGrade
+	    uml_guard "result ok"
+	end
+
+	flow 129336 "<flow>"
+	  on activityaction_ref 128568 // activity action RapportInvalidRapportGrade
+	    uml_guard "result invalid"
+	end
+      end
+
+      activityaction 128056 "Student passed"
+	opaque_action
+	flow 128568 "<flow>"
+	  on activitynode_ref 128440 // activity_final
+	end
+      end
+
+      activityaction 128184 "Student Failed"
+	opaque_action
+	flow 128696 "<flow>"
+	  on activitynode_ref 128696 // flow_final
+	end
+      end
+
+      activitynode 128696 flow_final ""
+      end
+
+      activityaction 128312 "CheckRapportGrade"
+	opaque_action
+	flow 129080 "result"
+	  stereotype "decisionInputFlow"
+	  on activitynode_ref 128568 // decision
+	end
+      end
+
+      activityaction 128440 "StoreRapportGrade"
+	opaque_action
+	flow 129592 "<flow>"
+	  on activitynode_ref 128824 // flow_final
+	end
+      end
+
+      activityaction 128568 "RapportInvalidRapportGrade"
+	opaque_action
+	flow 129464 "<flow>"
+	  on activityaction_ref 128440 // activity action StoreRapportGrade
+	end
+      end
+
+      activitynode 128824 flow_final ""
+      end
+    end
+
+    activity 128184 "ActionFlowRaportGradeActivity"
+      activitydiagram 148024 "ActionFlow"
+	activitydiagramsettings draw_all_relations no
+	 end
+	size A4
+      end
+
+      activityobject 128312 "rapport cijfer"
+	 type class_ref 128952 // rapportGrade
+	unordered 
+	flow 129720 "<flow>"
+	  on activityaction_ref 128696 // activity action CheckRapportGrade
+	end
+
+	flow 129848 "<flow>"
+	  on pin_ref 128056 // 
+	end
+
+	flow 129976 "<flow>"
+	  on activityaction_ref 128696 // activity action CheckRapportGrade
+	end
+
+	flow 130104 "<flow>"
+	  on pin_ref 128696 // 
+	end
+      end
+
+      activityaction 128696 "CheckRapportGrade"
+	opaque_action
+	pin 128056 "" explicit_type ""
+	  unordered 
+	  in
+	end
+
+	pin 128184 "" explicit_type ""
+	  unordered 
+	  out
+	end
+
+	pin 128312 "" explicit_type ""
+	  unordered 
+	  return exception
+	end
+
+	pin 128440 "OK" explicit_type ""
+	  unordered 
+	  out
+	  flow 130232 "result"
+	    stereotype "decisionInputFlow"
+	    on activitynode_ref 129080 // decision
+	  end
+	end
+
+	pin 128568 "Failure" explicit_type ""
+	  unordered 
+	  return exception
+	  flow 130744 "<flow>"
+	    on activityaction_ref 129080 // activity action RapportExceptionRapportGrade
+	  end
+	end
+
+	pin 128696 "" explicit_type ""
+	  unordered 
+	  in
+	end
+      end
+
+      activitynode 128952 decision ""
+      end
+
+      activitynode 129080 decision ""
+	flow 130360 "<flow>"
+	  on activityaction_ref 128824 // activity action StoreRapportGrade
+	    uml_guard "result ok"
+	end
+
+	flow 130488 "<flow>"
+	  on activityaction_ref 128952 // activity action RapportInvalidRapportGrade
+	end
+      end
+
+      activityaction 128824 "StoreRapportGrade"
+	opaque_action
+	flow 130872 "<flow>"
+	  on activitynode_ref 129208 // flow_final
+	end
+      end
+
+      activityaction 128952 "RapportInvalidRapportGrade"
+	opaque_action
+	flow 130616 "<flow>"
+	  on activityaction_ref 128824 // activity action StoreRapportGrade
+	end
+      end
+
+      activityaction 129080 "RapportExceptionRapportGrade"
+	opaque_action
+	flow 131000 "<flow>"
+	  on activitynode_ref 129336 // flow_final
+	end
+      end
+
+      activitynode 129208 flow_final ""
+      end
+
+      activitynode 129336 flow_final ""
+      end
+    end
+
+    sequencediagram 154552 "RapportStorageSequence"
+      sequencediagramsettings end
+      overlapping_bars size A4
+    end
+
+    classinstance 138040 ""
+      type class_ref 128568 // Mentor
+      attributes
+        end
+      relations
+        end
+    end
+  end
+
+  componentview 128056 "Component view"
+    //component diagram settings
+    componentdiagramsettings
+     end
+    componentdiagram 141368 "Package diagram"
+      componentdiagramsettings
+       end
+      size A4
+    end
+  end
+end

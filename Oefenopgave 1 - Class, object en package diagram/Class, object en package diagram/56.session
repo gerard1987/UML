@@ -1,0 +1,21 @@
+window_sizes 2560 1369 496 2059 1219 104
+
+diagrams
+  activitydiagram_ref 147896 // RapportGradeCheck
+    1647 981 100 A4 0 0
+  activitydiagram_ref 148024 // ActionFlow
+    2059 1227 100 A4 0 0
+  active  sequencediagram_ref 154552 // RapportStorageSequence
+    1647 975 100 A4 0 0
+  classdiagram_ref 128056 // RapportStorageSystem
+    1647 975 100 A4 0 0
+  objectdiagram_ref 134584 // RapportStorageImplementation
+    1647 975 100 A4 0 0
+end
+show_stereotypes
+selected sequencediagram_ref 154552 // RapportStorageSequence
+open
+  activitynode_ref 128568 // decision
+  componentview_ref 128056 // Component view
+end
+end

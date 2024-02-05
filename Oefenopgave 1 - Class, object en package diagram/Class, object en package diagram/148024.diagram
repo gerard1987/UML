@@ -1,0 +1,100 @@
+format 224
+
+activitycanvas 128056 activity_ref 128184 // ActionFlowRaportGradeActivity
+  
+  xyzwh 58 183 2000 749 489
+end
+activityobjectcanvas 128184 activityobject_ref 128312 // activity object rapport cijfer
+  
+  xyzwh 143 256 2005 81 45
+end
+activityactioncanvas 128312 activityaction_ref 128696 // activity action CheckRapportGrade
+  
+  show_opaque_action_definition default
+  xyzwh 116 404 2005 139 63
+  pins
+    pincanvas 128568 pin_ref 128056 // 
+      xyzwh 179 394 2007 11 11
+    end
+    pincanvas 128696 pin_ref 128184 // 
+      xyzwh 254 421 2007 11 11
+    end
+    pincanvas 128952 pin_ref 128312 // 
+      xyzwh 235 466 2007 11 11 label_xy 247 473
+    end
+    pincanvas 129336 pin_ref 128440 // OK
+      xyzwh 254 421 2007 11 11 label_xy 269 412
+    end
+    pincanvas 129464 pin_ref 128568 // Failure
+      xyzwh 254 444 2007 11 11 label_xy 269 435
+    end
+    pincanvas 129592 pin_ref 128696 // 
+      xyzwh 177 394 2007 11 11
+    end
+  end
+end
+activitynodecanvas 131000 activitynode_ref 129080 // decision
+  xyz 414 409 2005
+end
+activityactioncanvas 131256 activityaction_ref 128824 // activity action StoreRapportGrade
+  
+  show_opaque_action_definition default
+  xyzwh 528 404 2005 151 47
+end
+activityactioncanvas 131640 activityaction_ref 128952 // activity action RapportInvalidRapportGrade
+  
+  show_opaque_action_definition default
+  xyzwh 426 538 2005 172 44
+end
+activityactioncanvas 132024 activityaction_ref 129080 // activity action RapportExceptionRapportGrade
+  
+  show_opaque_action_definition default
+  xyzwh 211 534 2005 191 47
+end
+activitynodecanvas 132280 activitynode_ref 129208 // flow_final
+  xyz 742 418 2005
+end
+activitynodecanvas 132536 activitynode_ref 129336 // flow_final
+  xyz 295 630 2005
+end
+flowcanvas 129720 flow_ref 130104 // <flow>
+  
+  from ref 128184 z 2008 to ref 129592
+   write_horizontally default
+end
+flowcanvas 131128 flow_ref 130232 // result
+  
+  from ref 129336 z 2008 label "result" xyz 325.5 412 3000 stereotype "<<decisionInputFlow>>" xyz 283.5 426 3000 to ref 131000
+   write_horizontally default
+end
+flowcanvas 131384 flow_ref 130360 // <flow>
+  
+  from ref 131000 z 2006 label "[result ok]" xyz 457.5 414 3000 to ref 131256
+   write_horizontally default
+end
+flowcanvas 131768 flow_ref 130488 // <flow>
+  
+  from ref 131000 z 2006 to ref 131640
+   write_horizontally default
+end
+flowcanvas 131896 flow_ref 130616 // <flow>
+  
+  from ref 131640 z 2006 to ref 131256
+   write_horizontally default
+end
+flowcanvas 132152 flow_ref 130744 // <flow>
+  
+  from ref 129464 z 2008 to ref 132024
+   write_horizontally default
+end
+flowcanvas 132408 flow_ref 130872 // <flow>
+  
+  from ref 131256 z 2006 to ref 132280
+   write_horizontally default
+end
+flowcanvas 132664 flow_ref 131000 // <flow>
+  
+  from ref 132024 z 2006 to ref 132536
+   write_horizontally default
+end
+end
