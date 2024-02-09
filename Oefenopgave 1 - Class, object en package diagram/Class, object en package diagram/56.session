@@ -5,17 +5,20 @@ diagrams
     1647 981 100 A4 0 0
   activitydiagram_ref 148024 // ActionFlow
     2059 1227 100 A4 0 0
-  active  sequencediagram_ref 154552 // RapportStorageSequence
+  sequencediagram_ref 154552 // RapportStorageSequence
     1647 975 100 A4 0 0
   classdiagram_ref 128056 // RapportStorageSystem
     1647 975 100 A4 0 0
   objectdiagram_ref 134584 // RapportStorageImplementation
     1647 975 100 A4 0 0
+  usecasediagram_ref 161080 // Teacher grades student
+    1647 975 100 A4 0 0
+  active  usecasediagram_ref 161208 // Mentor maakt eind rapport scholier
+    1647 975 100 A4 0 0
 end
 show_stereotypes
-selected sequencediagram_ref 154552 // RapportStorageSequence
+selected usecasediagram_ref 161208 // Mentor maakt eind rapport scholier
 open
-  activitynode_ref 128568 // decision
-  componentview_ref 128056 // Component view
+  usecaseview_ref 128184 // Mentor maakt eindrapport op voor scholier
 end
 end

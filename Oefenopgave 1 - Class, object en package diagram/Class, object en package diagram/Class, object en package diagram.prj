@@ -1,6 +1,6 @@
 format 224
 "Class, object en package diagram"
-  revision 6
+  revision 7
   modified_by 56 "gerard.deway"
 
 
@@ -125,6 +125,22 @@ ${members}}
       classrelation 133944 // <association>
 	relation_ref 131512 // <association>
       end
+
+      classrelation 141752 // <generalisation>
+	relation 138936 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 141752 // <generalisation>
+	  b parent class_ref 142264 // Bert
+      end
+
+      classrelation 141880 // <generalisation>
+	relation 139064 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 141880 // <generalisation>
+	  b parent class_ref 142392 // Jan
+      end
     end
 
     class 128184 "Teacher"
@@ -205,6 +221,22 @@ ${members}}
 
       classrelation 133688 // <association>
 	relation_ref 131384 // <association>
+      end
+
+      classrelation 141496 // <generalisation>
+	relation 138680 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 141496 // <generalisation>
+	  b parent class_ref 142008 // Alfred
+      end
+
+      classrelation 141624 // <generalisation>
+	relation 138808 ---|>
+	  a public
+	    php "${type}"
+	    classrelation_ref 141624 // <generalisation>
+	  b parent class_ref 142136 // Frank
       end
     end
 
@@ -1120,6 +1152,395 @@ ${members}}
       componentdiagramsettings
        end
       size A4
+    end
+  end
+
+  usecaseview 128056 "Teacher grade student"
+    
+    usecasediagramsettings end
+    
+    sequencediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    activitydiagramsettings
+     end
+    usecasediagram 161080 "Teacher grades student"
+      usecasediagramsettings draw_all_relations no end
+      size A4
+    end
+
+    class 142008 "Alfred"
+      visibility package stereotype "actor"
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 142136 "Frank"
+      visibility package stereotype "actor"
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    usecase 128184 "Grade subject of student"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 128312 "Kijk proefwerk na"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+      simplerelation 128184
+	-_->
+	  stereotype "include"
+	  on usecase_ref 128440 // Geef rapport cijfer
+      end
+
+    end
+
+    usecase 128440 "Geef rapport cijfer"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+      simplerelation 128056
+	-_->
+	  stereotype "include"
+	  on usecase_ref 128312 // Kijk proefwerk na
+      end
+
+    end
+
+    usecase 128568 "Select student to grade"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 128696 "Give student grade for test"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    class 142264 "Bert"
+      visibility package stereotype "actor"
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    class 142392 "Jan"
+      visibility package stereotype "actor"
+      cpp_decl ""
+      java_decl ""
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    usecase 128824 "Wijzig vak"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+      simplerelation 128696
+	-_->
+	  stereotype "extend"
+	  on usecase_ref 128312 // Kijk proefwerk na
+	comment "Condition : gebruiker wijzigt vak
+
+extension points : kies Vak
+
+"
+      end
+
+      simplerelation 128952
+	-_->
+	  stereotype "extend"
+	  on usecase_ref 129080 // Eindrapport opmaken scholier
+      end
+    end
+
+    usecase 128952 "Wijzig scholier"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+      simplerelation 128824
+	-_->
+	  stereotype "extend"
+	  on usecase_ref 128312 // Kijk proefwerk na
+      end
+    end
+  end
+
+  usecaseview 128184 "Mentor maakt eindrapport op voor scholier"
+    
+    usecasediagramsettings end
+    
+    sequencediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    activitydiagramsettings
+     end
+    usecasediagram 161208 "Mentor maakt eind rapport scholier"
+      usecasediagramsettings draw_all_relations no end
+      size A4
+    end
+
+    usecase 129080 "Eindrapport opmaken scholier"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+      simplerelation 129208
+	-_->
+	  stereotype "extend"
+	  on usecase_ref 128952 // Wijzig scholier
+      end
+
+      simplerelation 129336
+	-_->
+	  stereotype "include"
+	  on usecase_ref 129336 // Haal rapportcijfers op
+      end
+    end
+
+    usecase 129208 "Wijzig klas"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+      simplerelation 129080
+	-_->
+	  stereotype "extend"
+	  on usecase_ref 129080 // Eindrapport opmaken scholier
+      end
+    end
+
+    usecase 129336 "Haal rapportcijfers op"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
     end
   end
 end

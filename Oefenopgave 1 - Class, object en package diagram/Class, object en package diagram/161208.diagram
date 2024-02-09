@@ -1,0 +1,54 @@
+format 224
+
+subject 128056 "RapportGrade"
+  xyzwh 186 147 2000 601 567
+classcanvas 128184 class_ref 128568 // Mentor
+  simpleclassdiagramsettings end
+  xyz 85 300 2000
+end
+usecasecanvas 128312 usecase_ref 129080 // Eindrapport opmaken scholier
+  xyzwh 262 315 3005 67 33 label_xy 223 347
+end
+usecasecanvas 128440 usecase_ref 128824 // Wijzig vak
+  xyzwh 420 252 3005 67 33 label_xy 428 284
+end
+usecasecanvas 128696 usecase_ref 129208 // Wijzig klas
+  xyzwh 262 185 3005 67 33 label_xy 269 217
+end
+usecasecanvas 128824 usecase_ref 128952 // Wijzig scholier
+  xyzwh 262 444 3005 67 33 label_xy 260 476
+end
+note 129080 "Condition : Gebruiker kiest klas
+InteractionPoints : Kies een klas"
+  xyzwh 350 196 2005 319 49
+note 129336 "Condition: Gebruiker kiest vak
+InteractionPoints: kies vak"
+  xyzwh 541 282 2005 267 47
+note 129720 "Condition: Gebruiker kiest scholier
+InteractionPoints: Kies scholier"
+  xyzwh 353 437 2005 267 47
+usecasecanvas 130360 usecase_ref 129336 // Haal rapportcijfers op
+  xyzwh 400 341 3005 64 32 label_xy 380 373
+end
+simplerelationcanvas 128568 simplerelation_ref 128952
+  from ref 128440 z 3006 stereotype "<<extend>>" xyz 345.5 297.5 3000 to ref 128312
+end
+simplerelationcanvas 128952 simplerelation_ref 129080
+  from ref 128696 z 3006 stereotype "<<extend>>" xyz 266.5 265 3000 to ref 128312
+end
+simplerelationcanvas 129592 simplerelation_ref 129208
+  geometry VH
+  from ref 128312 z 3006 to point 293 441
+  line 130104 z 3006 stereotype "<<extend>>" xyz 265.5 393 3000 to ref 128824
+end
+line 130872 ----
+  from ref 128184 z 3006 to ref 128312
+line 131000 ----
+  from ref 128312 z 3006 to ref 130360
+line 129208 -_-_
+  from ref 128952 z 3007 to ref 129080
+line 129464 -_-_
+  from ref 128568 z 3007 to ref 129336
+line 131128 -_-_
+  from ref 129592 z 3007 to ref 129720
+end

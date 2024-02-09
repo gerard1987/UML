@@ -40,7 +40,7 @@ end
 relationcanvas 133816 relation_ref 130744 // <association>
   from ref 128184 z 2001 to ref 128312
   no_role_a no_role_b
-  multiplicity_a_pos 431 229 3000 multiplicity_b_pos 429 136 3000
+  multiplicity_a_pos 430 227 3000 multiplicity_b_pos 427 137 3000
 end
 relationcanvas 134072 relation_ref 131000 // <generalisation>
   from ref 128056 z 2001 to ref 131128
@@ -60,7 +60,7 @@ end
 relationcanvas 134456 relation_ref 131384 // <association>
   from ref 131768 z 2001 to ref 128184
   no_role_a no_role_b
-  multiplicity_a_pos 417 129 3000 multiplicity_b_pos 103 424 3000
+  multiplicity_a_pos 412 129 3000 multiplicity_b_pos 106 421 3000
 end
 relationcanvas 134584 relation_ref 131512 // <association>
   from ref 131768 z 2001 to ref 128056

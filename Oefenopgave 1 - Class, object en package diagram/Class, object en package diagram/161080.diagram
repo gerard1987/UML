@@ -1,0 +1,43 @@
+format 224
+
+subject 128056 "RapportStorageImplementation"
+  xyzwh 266 302 2000 518 441
+classcanvas 128184 class_ref 128184 // Teacher
+  simpleclassdiagramsettings end
+  xyz 150 476 2005
+end
+usecasecanvas 131000 usecase_ref 128312 // Kijk proefwerk na
+  xyzwh 334 493 3005 64 32 label_xy 323 525
+end
+usecasecanvas 131384 usecase_ref 128440 // Geef rapport cijfer
+  xyzwh 548 492 3005 64 32 label_xy 535 524
+end
+usecasecanvas 133944 usecase_ref 128824 // Wijzig vak
+  xyzwh 333 364 3005 64 32 label_xy 341 396
+end
+note 134328 "Condition : gebruiker wijzigt vak
+extension points : kies Vak
+"
+  xyzwh 434 370 2005 185 61
+usecasecanvas 134584 usecase_ref 128952 // Wijzig scholier
+  xyzwh 332 629 3005 64 32 label_xy 330 661
+end
+note 134840 "Gebruiker kiest wijzig scholier
+Extension points : Kies scholier"
+  xyzwh 427 573 2005 193 55
+simplerelationcanvas 131768 simplerelation_ref 128184
+  from ref 131000 z 3006 stereotype "<<include>>" xyz 442.5 507 3000 to ref 131384
+end
+simplerelationcanvas 134200 simplerelation_ref 128696
+  from ref 133944 z 3006 stereotype "<<extend>>" xyz 336 443.5 3000 to ref 131000
+end
+simplerelationcanvas 134712 simplerelation_ref 128824
+  from ref 134584 z 3006 stereotype "<<extend>>" xyz 335 575.5 3000 to ref 131000
+end
+line 135096 ----
+  from ref 128184 z 3006 to ref 131000
+line 134456 -_-_
+  from ref 134200 z 3007 to ref 134328
+line 134968 -_-_
+  from ref 134712 z 3007 to ref 134840
+end
